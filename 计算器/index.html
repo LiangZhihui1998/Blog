@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8"/>
+  <title>JS 计算器</title> 
+  <link rel="stylesheet" href="css/1.css">
+  <script language="javascript">
+      var now=new Date();
+      var hour=now.getHours();
+      var minu=now.getMinutes();
+      alert("你好！现在是"+hour+":"+minu+"\r欢迎使用 JS 计算器！");
+  </script>
+
+  <script type="text/javascript">
+   function getResult(){
+     var num;
+    var num1=document.getElementById("num1").value;
+    var num2=document.getElementById("num2").value;
+    var operator=document.getElementById("operator").value;
+var num1=parseInt(num1);
+var num2=parseInt(num2);
+if(!(isNaN(num1) && isNaN(num2)))
+{
+      if(operator=="+")
+      {
+          num=num1+num2;
+      }
+      else if(operator=="-")
+      {
+          num=num1-num2;
+      }
+      else if(operator=="*")
+      {
+          num=num1*num2;
+      }
+      else if(operator=="/")
+      {
+          num=num1/num2;
+      }
+      else if (operator=="%") 
+      {
+	        num=num1%num2;
+      }
+}
+else
+{
+ alert("无效输入！");
+}
+
+document.getElementById("result").value=num;
+   }
+  </script> 
+ </head> 
+ <body>
+ <div class="zhuti">
+ <div class="biaoti">
+ <h1> J S 计 算 器</h1>
+<p>计 算 器 雏 形</p>
+<p>请 输 入 . . . </p>
+ </div>
+ <div class="l123"></div>
+ <div class="jisuanqi">
+   <input type="text" id="num1"  style="width: 300px;height: 30px; color: black;font-size:30px;"/> 
+   <select id="operator" style="color: orange;width: 100px; height: 37px;font-size:30px;">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+<option value="%">%</option>
+   </select>
+   <input type="text" id="num2" style="color: black;width: 300px;height: 30px;font-size:30px;" /> 
+   <input type="button" value=" = " onclick="getResult();" style="color: orange;width: 100px;height: 37px;font-size:30px;" /> 
+   <input type="text" id="result" value="" style="color: blue;width: 300px;height: 30px;font-size:30px;"/> 
+   </div></div>  
+ </body>
+</html>

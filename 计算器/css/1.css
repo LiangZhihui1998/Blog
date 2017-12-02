@@ -1,0 +1,27 @@
+.zhuti{
+	background-image: url(hao123.jpg);
+	background-position: center top;
+	margin: 0 auto;
+	height: 730px;
+	
+	width: 100%;
+ 
+}
+.biaoti{
+	width: 100%;
+	/*display: flex;*/
+	justify-content: left;
+	align-items: center;
+	height: 200px;
+	text-align: center;
+	font-weight: ;
+    color:white;
+}
+.jisuanqi{
+	text-align: center;
+	width: 100%;
+	height: 400px;
+}
+.l123{
+	height: 150px;
+}
